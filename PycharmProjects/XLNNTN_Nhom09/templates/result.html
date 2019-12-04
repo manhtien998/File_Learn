@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kết quả</title>
+        <!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+
+        <header>
+            <div class="container">
+                <h2>Nhận diện "Văn bản email Spam"</h2>
+            </div>
+        </header>
+        <p style="color:blue; text-align: center;"><b>Kết quả</b></p>
+        <div class="results">
+            {% if prediction == 1%}
+
+            <h2 style="color:red;text-align: center;">"Văn bản email " là Spam</h2>
+
+            {% elif prediction == 0%}
+
+            <h2 style="color:blue;text-align: center;">"Văn bản email" không phải là Spam</h2>
+            {% endif %}
+        </div>
+    </body>
+</html>
